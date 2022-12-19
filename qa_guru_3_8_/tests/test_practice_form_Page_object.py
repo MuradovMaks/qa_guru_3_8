@@ -5,7 +5,7 @@ from qa_guru_3_8_.usual_steps import practice_form_modules
 from qa_guru_3_8_.control import jpegs
 
 
-def test_practice_form_pg():
+def test_practice_form_pg(open_browser):
     practice_form_modules.open_website('https://demoqa.com/automation-practice-form')
     practice_form_modules.data_for_submit('#firstName', 'Max')
     practice_form_modules.data_for_submit('[id=lastName]', 'Muradov')
@@ -21,7 +21,7 @@ def test_practice_form_pg():
     practice_form_modules.subjects('[id="subjectsInput"]', 'Hindi')
     practice_form_modules.dropdowns_home('[id="react-select-3-input"]', 'NCR')
     practice_form_modules.dropdowns_home('[id="react-select-4-input"]', 'Noida')
-    jpegs.icon('#uploadPicture', 'jpegs/1614256626_python_logo.jpg')
+    jpegs.icon('#uploadPicture', 'jpegi/1614256626_python_logo.jpg')
     practice_form_modules.submit("[id = submit]")
     practice_form_modules.research_text_from_modal(
         '[class="table table-dark table-striped table-bordered table-hover"]',
